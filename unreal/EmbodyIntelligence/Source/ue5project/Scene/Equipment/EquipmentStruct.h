@@ -67,7 +67,7 @@ struct FCaptureInfo
 	FString FileField;
 	
 	UPROPERTY()
-	USceneCaptureComponent2D* CaptureComponent;
+	USceneCaptureComponent2D* CaptureComponent = nullptr;
 	int32 Index = -1;
 	FString SavePath;
 	TSharedPtr<FLCapture> LCapture;

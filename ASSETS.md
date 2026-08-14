@@ -14,11 +14,10 @@ The public Hugging Face URL and checksum manifest will be added here after uploa
 
 ```text
 EmbodyIntelligence-Assets/
-├── Content/
-│   ├── ArtRes/
-│   ├── Program/
-│   ├── StarterContent/
-│   └── Waterfalls/
+├── PluginContent/
+│   └── Program/
+├── HostContent/
+│   └── ArtRes/
 ├── README.md
 └── MANIFEST.sha256
 ```
@@ -33,31 +32,37 @@ Verify `MANIFEST.sha256` if the asset repository provides it.
 
 ## Install
 
-Close Unreal Editor and back up the host project's existing `Content/` directory. Merge the downloaded `Content/` into the host project:
+Close Unreal Editor and back up the existing content directories. Install each asset group at its matching Unreal mount point:
 
 ```text
 HostProject/
 ├── HostProject.uproject
-├── Content/                         # Hugging Face assets
+├── Content/                         # HostContent -> /Game
 └── Plugins/
-    └── EmbodyIntelligence/          # GitHub plugin source
+    └── EmbodyIntelligence/
+        └── Content/                 # PluginContent -> /EmbodyIntelligence
 ```
 
 Linux/macOS:
 
 ```bash
-cp -a EmbodyIntelligence-Assets/Content/. <HostProject>/Content/
+cp -a EmbodyIntelligence-Assets/PluginContent/. <HostProject>/Plugins/EmbodyIntelligence/Content/
+cp -a EmbodyIntelligence-Assets/HostContent/. <HostProject>/Content/
 ```
 
 PowerShell:
 
 ```powershell
 Copy-Item `
-  -Path .\EmbodyIntelligence-Assets\Content\* `
+  -Path .\EmbodyIntelligence-Assets\PluginContent\* `
+  -Destination <HostProject>\Plugins\EmbodyIntelligence\Content\ `
+  -Recurse -Force
+Copy-Item `
+  -Path .\EmbodyIntelligence-Assets\HostContent\* `
   -Destination <HostProject>\Content\ `
   -Recurse -Force
 ```
 
-Do not copy these assets into `HostProject/Plugins/EmbodyIntelligence/Content/`. The C++ source references `/Game/...`, which resolves against the host project's `Content/` mount.
+Keep the groups separate: `PluginContent/Program` resolves as `/EmbodyIntelligence/Program`, while `HostContent/ArtRes` resolves as `/Game/ArtRes`.
 
 Before publishing the asset repository, document its matching source release, Unreal/Cesium versions, checksums, third-party sources, licenses, and redistribution terms.

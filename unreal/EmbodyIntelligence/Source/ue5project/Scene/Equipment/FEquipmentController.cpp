@@ -22,7 +22,7 @@ void FEquipmentController::CreateDrones(const TArray<FDroneInfo>& InDroneInfos)
 
 void FEquipmentController::CreateDrone(const FDroneInfo& InDroneInfo)
 {
-	static const FSoftObjectPath DroneBlueprintPath(TEXT("/Script/Engine.Blueprint'/Game/Program/Equipment/BP_Drone.BP_Drone_C'"));
+	static const FSoftObjectPath DroneBlueprintPath(TEXT("/Script/Engine.Blueprint'/EmbodyIntelligence/Program/Equipment/BP_Drone.BP_Drone_C'"));
 	SpawnEquipment(InDroneInfo.Id, InDroneInfo.Name, EEquipmentType::Drone, InDroneInfo.Location, DroneBlueprintPath);
 }
 
@@ -36,7 +36,7 @@ void FEquipmentController::CreateCars(const TArray<FCarInfo>& InCarInfos)
 
 void FEquipmentController::CreateCar(const FCarInfo& InCarInfo)
 {
-	static const FSoftObjectPath CarBlueprintPath(TEXT("/Script/Engine.Blueprint'/Game/Program/Equipment/BP_Car.BP_Car_C'"));
+	static const FSoftObjectPath CarBlueprintPath(TEXT("/Script/Engine.Blueprint'/EmbodyIntelligence/Program/Equipment/BP_Car.BP_Car_C'"));
 	SpawnEquipment(InCarInfo.Id, InCarInfo.Name, EEquipmentType::Car, InCarInfo.Location, CarBlueprintPath);
 }
 
@@ -50,7 +50,7 @@ void FEquipmentController::CreateDogs(const TArray<FDogInfo>& InDogInfos)
 
 void FEquipmentController::CreateDog(const FDogInfo& InDogInfo)
 {
-	static const FSoftObjectPath DogBlueprintPath(TEXT("/Script/Engine.Blueprint'/Game/Program/Equipment/BP_Dog.BP_Dog_C'"));
+	static const FSoftObjectPath DogBlueprintPath(TEXT("/Script/Engine.Blueprint'/EmbodyIntelligence/Program/Equipment/BP_Dog.BP_Dog_C'"));
 	if (AEquipmentActor* DogActor = SpawnEquipment(InDogInfo.Id, InDogInfo.Name, EEquipmentType::Dog, InDogInfo.Location, DogBlueprintPath))
 	{
 		DogActor->SetEquipmentScale(FVector(InDogInfo.Scale));

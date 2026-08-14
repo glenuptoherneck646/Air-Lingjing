@@ -10,7 +10,7 @@ class FSpaceWidgetStyleSet final
 	FSpaceWidgetStyleSet()
 	{
 		{	// PointImageBrush
-			UTexture2D* Texture = LoadObject<UTexture2D>(nullptr, TEXT("/Script/Engine.Texture2D'/Game/Program/UserInterface/Textures/SpaceWidget/Point.Point'"));
+			UTexture2D* Texture = LoadObject<UTexture2D>(nullptr, TEXT("/Script/Engine.Texture2D'/EmbodyIntelligence/Program/UserInterface/Textures/SpaceWidget/Point.Point'"));
 			if (Texture)
 			{
 				Texture->AddToRoot();

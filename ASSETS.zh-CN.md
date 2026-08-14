@@ -14,11 +14,10 @@ Coming soon / 即将上传
 
 ```text
 EmbodyIntelligence-Assets/
-├── Content/
-│   ├── ArtRes/
-│   ├── Program/
-│   ├── StarterContent/
-│   └── Waterfalls/
+├── PluginContent/
+│   └── Program/
+├── HostContent/
+│   └── ArtRes/
 ├── README.md
 └── MANIFEST.sha256
 ```
@@ -33,31 +32,37 @@ Coming soon / 即将上传
 
 ## 安装
 
-关闭 Unreal Editor，并备份宿主项目现有的 `Content/`。将下载后的 `Content/` 合并到宿主项目：
+关闭 Unreal Editor，并备份现有资产目录。将两类资产分别安装到对应的 Unreal 挂载点：
 
 ```text
 HostProject/
 ├── HostProject.uproject
-├── Content/                         # Hugging Face 资产
+├── Content/                         # HostContent -> /Game
 └── Plugins/
-    └── EmbodyIntelligence/          # GitHub 插件源码
+    └── EmbodyIntelligence/
+        └── Content/                 # PluginContent -> /EmbodyIntelligence
 ```
 
 Linux/macOS：
 
 ```bash
-cp -a EmbodyIntelligence-Assets/Content/. <HostProject>/Content/
+cp -a EmbodyIntelligence-Assets/PluginContent/. <HostProject>/Plugins/EmbodyIntelligence/Content/
+cp -a EmbodyIntelligence-Assets/HostContent/. <HostProject>/Content/
 ```
 
 PowerShell：
 
 ```powershell
 Copy-Item `
-  -Path .\EmbodyIntelligence-Assets\Content\* `
+  -Path .\EmbodyIntelligence-Assets\PluginContent\* `
+  -Destination <HostProject>\Plugins\EmbodyIntelligence\Content\ `
+  -Recurse -Force
+Copy-Item `
+  -Path .\EmbodyIntelligence-Assets\HostContent\* `
   -Destination <HostProject>\Content\ `
   -Recurse -Force
 ```
 
-不要复制到 `HostProject/Plugins/EmbodyIntelligence/Content/`。C++ 源码中的 `/Game/...` 指向宿主项目的 `Content/` 挂载点。
+请勿混放两类资产：`PluginContent/Program` 对应 `/EmbodyIntelligence/Program`，`HostContent/ArtRes` 对应 `/Game/ArtRes`。
 
 发布资产仓库前，应说明对应的源码版本、Unreal/Cesium 版本、校验值、第三方来源、许可证和再分发条件。

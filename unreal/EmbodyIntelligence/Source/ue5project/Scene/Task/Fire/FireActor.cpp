@@ -4,7 +4,7 @@
 
 AFireActor::AFireActor()
 {
-	static ConstructorHelpers::FObjectFinder<UParticleSystem> FireAsset(TEXT("/Game/StarterContent/Particles/P_Fire.P_Fire"));
+	static ConstructorHelpers::FObjectFinder<UParticleSystem> FireAsset(TEXT("/Game/ArtRes/StarterContent/Particles/P_Fire.P_Fire"));
 	if (FireAsset.Succeeded())
 	{
 		FireParticle = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("FireParticle"));

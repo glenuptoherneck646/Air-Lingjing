@@ -137,13 +137,14 @@ Download the asset repository:
 Coming soon / 即将上传
 ```
 
-Merge the downloaded asset package into the host project, not the plugin:
+Install the downloaded asset package in its two mount locations:
 
 ```text
-<HostProject>/Content/
+<HostProject>/Plugins/EmbodyIntelligence/Content/  # PluginContent
+<HostProject>/Content/                            # HostContent
 ```
 
-The source uses `/Game/...` references, so placing assets under the plugin's `Content/` directory changes the mount path and breaks loading. See [ASSETS.md](ASSETS.md) and [unreal/EmbodyIntelligence/README.md](unreal/EmbodyIntelligence/README.md).
+`Program` assets use the `/EmbodyIntelligence/...` plugin mount, while scene assets use the `/Game/ArtRes/...` host-project mount. See [ASSETS.md](ASSETS.md) and [unreal/EmbodyIntelligence/README.md](unreal/EmbodyIntelligence/README.md).
 
 The plugin defaults to:
 

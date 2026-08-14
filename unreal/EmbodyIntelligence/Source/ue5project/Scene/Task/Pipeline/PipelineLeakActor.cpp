@@ -4,7 +4,7 @@
 
 APipelineLeakActor::APipelineLeakActor()
 {
-	static ConstructorHelpers::FObjectFinder<UParticleSystem> LeakAsset(TEXT("/Game/StarterContent/Particles/P_Steam_Lit.P_Steam_Lit"));
+	static ConstructorHelpers::FObjectFinder<UParticleSystem> LeakAsset(TEXT("/Game/ArtRes/StarterContent/Particles/P_Steam_Lit.P_Steam_Lit"));
 	if (LeakAsset.Succeeded())
 	{
 		LeakParticle = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("LeakParticle"));

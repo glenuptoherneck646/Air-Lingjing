@@ -38,7 +38,7 @@ cp -a unreal/EmbodyIntelligence <HostProject>/Plugins/
 Coming soon / 即将上传
 ```
 
-将资产包的 `Content/` 合并到 `<HostProject>/Content/`。不要放入插件的 `Content/`；源码使用 `/Game/...` 宿主项目路径。详细说明见 [../../ASSETS.zh-CN.md](../../ASSETS.zh-CN.md)。
+将 `PluginContent/` 复制到 `<HostProject>/Plugins/EmbodyIntelligence/Content/`，并将 `HostContent/` 复制到 `<HostProject>/Content/`。源码同时使用 `/EmbodyIntelligence/...` 插件路径与 `/Game/ArtRes/...` 宿主项目路径。详细说明见 [../../ASSETS.zh-CN.md](../../ASSETS.zh-CN.md)。
 
 ## 配置后端地址
 

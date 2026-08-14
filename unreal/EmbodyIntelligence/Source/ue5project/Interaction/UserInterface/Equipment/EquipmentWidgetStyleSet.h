@@ -9,7 +9,7 @@ class FEquipmentWidgetStyleSet final
 	FEquipmentWidgetStyleSet()
 	{
 		{	// BackgroundImageBrush
-			UTexture2D* Texture = LoadObject<UTexture2D>(nullptr, TEXT("/Script/Engine.Texture2D'/Game/Program/UserInterface/Textures/EquipmentWidget/Background.Background'"));
+			UTexture2D* Texture = LoadObject<UTexture2D>(nullptr, TEXT("/Script/Engine.Texture2D'/EmbodyIntelligence/Program/UserInterface/Textures/EquipmentWidget/Background.Background'"));
 			if (Texture)
 			{
 				Texture->AddToRoot();
@@ -18,7 +18,7 @@ class FEquipmentWidgetStyleSet final
 			RegisterSlateBrush(TEXT("BackgroundImageBrush"), ImageBrush);
 		}
 		{	// MapImageBrush
-			UTexture2D* Texture = LoadObject<UTexture2D>(nullptr, TEXT("/Script/Engine.Texture2D'/Game/Program/UserInterface/Textures/EquipmentWidget/Map.Map'"));
+			UTexture2D* Texture = LoadObject<UTexture2D>(nullptr, TEXT("/Script/Engine.Texture2D'/EmbodyIntelligence/Program/UserInterface/Textures/EquipmentWidget/Map.Map'"));
 			if (Texture)
 			{
 				Texture->AddToRoot();

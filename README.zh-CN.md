@@ -137,13 +137,14 @@ python examples/scenario_demo.py
 Coming soon / 即将上传
 ```
 
-将下载后的资产合并到宿主项目，而不是插件目录：
+将下载后的资产分别安装到两个挂载位置：
 
 ```text
-<HostProject>/Content/
+<HostProject>/Plugins/EmbodyIntelligence/Content/  # PluginContent
+<HostProject>/Content/                            # HostContent
 ```
 
-源码使用 `/Game/...` 路径；若把资产放入插件的 `Content/`，挂载路径会改变并导致加载失败。完整说明见 [ASSETS.zh-CN.md](ASSETS.zh-CN.md) 和 [unreal/EmbodyIntelligence/README.zh-CN.md](unreal/EmbodyIntelligence/README.zh-CN.md)。
+`Program` 资产使用 `/EmbodyIntelligence/...` 插件挂载点，场景资产使用 `/Game/ArtRes/...` 宿主项目挂载点。完整说明见 [ASSETS.zh-CN.md](ASSETS.zh-CN.md) 和 [unreal/EmbodyIntelligence/README.zh-CN.md](unreal/EmbodyIntelligence/README.zh-CN.md)。
 
 插件默认连接：
 

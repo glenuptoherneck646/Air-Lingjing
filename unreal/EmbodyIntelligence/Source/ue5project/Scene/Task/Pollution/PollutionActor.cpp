@@ -5,7 +5,7 @@ APollutionActor::APollutionActor()
 {
 	ChildActorComponent = CreateDefaultSubobject<UChildActorComponent>(TEXT("ChildActorComponent"));
 	ChildActorComponent->SetupAttachment(SceneComponent);
-	static ConstructorHelpers::FClassFinder<AActor> ActorClassFinder(TEXT("/Script/Engine.Blueprint'/Game/Waterfalls/Meshes/BP_GuanDao.BP_GuanDao_C'"));
+	static ConstructorHelpers::FClassFinder<AActor> ActorClassFinder(TEXT("/Script/Engine.Blueprint'/Game/ArtRes/Waterfalls/Meshes/BP_GuanDao.BP_GuanDao_C'"));
 	if (ActorClassFinder.Succeeded())
 	{
 		ChildActorComponent->SetChildActorClass(ActorClassFinder.Class);

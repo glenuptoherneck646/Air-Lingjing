@@ -38,7 +38,7 @@ Download:
 Coming soon / 即将上传
 ```
 
-Merge its `Content/` into `<HostProject>/Content/`. Do not place the asset package under the plugin's `Content/`; source references use `/Game/...` host-project paths. See [../../ASSETS.md](../../ASSETS.md).
+Copy `PluginContent/` into `<HostProject>/Plugins/EmbodyIntelligence/Content/` and `HostContent/` into `<HostProject>/Content/`. The source uses both `/EmbodyIntelligence/...` plugin paths and `/Game/ArtRes/...` host-project paths. See [../../ASSETS.md](../../ASSETS.md).
 
 ## Configure the Backend
 
